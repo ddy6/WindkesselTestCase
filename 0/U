@@ -1,0 +1,141 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+
+boundaryField
+{
+
+    inlet
+    {    
+        type 			flowRateInletVelocity;
+	value			uniform (0 0 0);
+	volumetricFlowRate	
+	{			
+			type	tableFile; 
+			file	"$FOAM_CASE/constant/QTable";
+	}
+        extrapolateProfile  	false;
+    }
+
+//to block/control backflow use:
+// {
+//      type           		inletOutlet;
+//	inletValue		uniform (0 0 0);
+//	value			uniform (0 0 0);
+//	phi			phi;
+//    }
+
+    iliac_out
+   {
+        type			zeroGradient;           		
+   }
+
+
+   renal01
+   {
+        type			zeroGradient;           		
+   }
+
+
+    
+    renal02
+   {
+        type			zeroGradient;           		
+   }
+
+
+    brachiocephalic
+   {
+        type			zeroGradient;           		
+   }
+
+
+    lcc
+   {
+        type			zeroGradient;           		
+   }
+
+
+    left_subclavian
+   {
+        type			zeroGradient;           		
+   }
+
+    celiac_trunk
+    {
+        type			zeroGradient;           		
+    }
+
+
+    sma
+    {
+        type			zeroGradient;           		
+    }
+
+
+    pipe
+    {
+        type            noSlip;
+    }
+
+//    reboa
+//    {
+//        type            noSlip;
+//    }
+//    reboa2
+//    {
+//        type            noSlip;
+//    }
+
+    defaultFaces
+    {
+        type            zeroGradient;
+    }
+    top
+    {
+        type 		zeroGradient;
+    }
+    left
+    {
+        type		zeroGradient;
+    }
+    right
+    {
+        type 		zeroGradient;
+    }
+    bottom
+    {
+        type		zeroGradient;
+    }
+    front
+    {
+        type 		zeroGradient;
+    }
+    back
+    {
+        type 		zeroGradient;
+    }
+
+
+
+}
+
+
+// ************************************************************************* //

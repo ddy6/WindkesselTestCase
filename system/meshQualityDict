@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      meshQualityDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Include defaults parameters from master dictionary
+#includeEtc "caseDicts/meshQualityDict"
+
+//- minFaceWeight (0 -> 0.5)
+minFaceWeight 0.00001;
+maxNonOrtho 75;
+maxBoundarySkewness 4;
+maxInternalSkewness 4;
+maxConcave 75;
+minVol 1e-16;
+minTetQuality 1e-15;
+minArea 0;
+minTwist 0.02;
+minDeterminant 0.001;
+minFaceWeight 0.00001;
+minVolRatio 0.01;
+
+
+// ************************************************************************* //

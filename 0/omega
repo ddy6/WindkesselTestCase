@@ -1,0 +1,110 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      omega;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 -1 0 0 0 0];
+
+internalField   uniform 440.15;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+   iliac_out
+    {
+        type            zeroGradient;
+    }
+    renal01
+    {
+	type		zeroGradient;
+    }
+    renal02
+    {
+	type		zeroGradient;
+    }
+    brachiocephalic
+    {
+        type            zeroGradient;
+    }
+    lcc
+    {
+        type            zeroGradient;
+    }
+    left_subclavian
+    {
+        type            zeroGradient;
+    }
+    celiac_trunk
+    {
+	type		zeroGradient;
+    }
+    sma
+    {
+	type		zeroGradient;
+    }
+    pipe	
+    {
+        type            omegaWallFunction;
+        value           $internalField;
+    }
+
+//    reboa
+//    {
+//        type            omegaWallFunction;
+//        value           $internalField;
+//    }
+//    reboa2
+//    {
+//        type            omegaWallFunction;
+//        value           $internalField;
+//    }
+    defaultFaces
+    {
+        type            zeroGradient;
+    }
+
+    top
+    {
+        type            zeroGradient;
+    }
+    left
+    {
+        type            zeroGradient;
+    }
+    right
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    front
+    {
+        type            zeroGradient;
+    }
+    back
+    {   
+        type            zeroGradient;
+    }
+
+
+}
+
+
+// ************************************************************************* //

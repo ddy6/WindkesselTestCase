@@ -1,0 +1,162 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            zeroGradient;
+    }
+   
+    brachiocephalic
+    {
+    type        windkesselPressure;
+    Rp          4.749e05; //increase to decrease mean flow to branch
+    C           7.370e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          4.5460e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    lcc
+    {
+    type        windkesselPressure;
+    Rp          1.735e06; //increase to decrease mean flow to branch
+    C           2.0170e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          1.6620e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    left_subclavian
+    {
+    type        windkesselPressure;
+    Rp          1.432e06; //increase to decrease mean flow to branch
+    C           2.4440e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          1.3715e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    celiac_trunk
+    {
+    type        windkesselPressure;
+    Rp          1.504e06; //increase to decrease mean flow to branch
+    C           1.995e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          3.8000e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    sma
+    {
+    type        windkesselPressure;
+    Rp          9.024e05; //increase to decrease mean flow to branch
+    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    renal01
+    {
+    type        windkesselPressure;
+    Rp          9.024e05; //increase to decrease mean flow to branch
+    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+    renal02
+    {
+    type        windkesselPressure;
+    Rp          9.024e05; //increase to decrease mean flow to branch
+    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    iliac_out
+    {
+    type        windkesselPressure;
+    Rp          2.710e05; //increase to decrease mean flow to branch
+    C           1.1070e-06; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          6.9200e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    P_downstream    0.4;      //keep constant; venous pressure
+    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
+    value       uniform     10; //step 0 value, matches initialPC
+    }
+
+    pipe
+    {
+        type            zeroGradient;
+    }
+
+//    reboa
+//    {
+//        type            zeroGradient;
+//    }
+//    reboa2
+//    {
+//        type            zeroGradient;
+//    }
+
+    defaultFaces
+    {
+        type            zeroGradient;
+    }
+
+    top
+    {
+        type            zeroGradient;
+    }
+    left
+    {
+        type            zeroGradient;
+    }
+    right
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    front
+    {
+        type            zeroGradient;
+    }
+    back
+    {    
+        type            zeroGradient;
+    }
+
+
+}
+
+// ************************************************************************* //
