@@ -29,8 +29,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          4.749e05; //increase to decrease mean flow to branch
-    C           7.370e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          4.5460e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           9.2125e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          5.4552e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -40,8 +40,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          1.735e06; //increase to decrease mean flow to branch
-    C           2.0170e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          1.6620e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           2.7230e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.1606e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -51,8 +51,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          1.432e06; //increase to decrease mean flow to branch
-    C           2.4440e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          1.3715e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           3.2994e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          1.7830e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -62,8 +62,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          1.504e06; //increase to decrease mean flow to branch
-    C           1.995e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          3.8000e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           2.5935e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          4.7500e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -73,8 +73,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           4.3222e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.8800e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -84,8 +84,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           4.1560e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.9952e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -94,8 +94,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.3248e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          2.3040e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           4.1560e-07; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          2.9952e+04; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
@@ -105,8 +105,8 @@ boundaryField
     {
     type        windkesselPressure;
     Rp          2.710e05; //increase to decrease mean flow to branch
-    C           1.1070e-06; //increase to increase buffer cap, smoother flow and reduced pulse pressure
-    Rc          6.9200e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
+    C           1.3284e-06; //increase to increase buffer cap, smoother flow and reduced pulse pressure
+    Rc          8.3040e+03; //should be similar for outlets of similar size; smaller branch means higher impedance, but doesn't make much difference at this level
     P_downstream    0.4;      //keep constant; venous pressure
     initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
     value       uniform     10; //step 0 value, matches initialPC
