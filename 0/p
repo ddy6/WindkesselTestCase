@@ -28,88 +28,88 @@ boundaryField
     brachiocephalic
     {
     type        windkesselPressure;
-    Rp          4.749e05; //increase to decrease mean flow to branch
-    C           7.8306e-07; // split-the-difference again
-    Rc          4.7733e+03; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          4.749e05; 
+    C           7.8306e-07;   // last stable
+    Rc          4.7733e+03;   // last stable (unchanged)
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     lcc
     {
     type        windkesselPressure;
-    Rp          1.735e06; //increase to decrease mean flow to branch
-    C           2.1935e-07; // split-the-difference again
-    Rc          1.7866e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          1.735e06;
+    C           2.1935e-07;   // last stable
+    Rc          1.7866e+04;   // last stable (unchanged)
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     left_subclavian
     {
     type        windkesselPressure;
-    Rp          1.432e06; //increase to decrease mean flow to branch
-    C           2.6579e-07; // split-the-difference again
-    Rc          1.4744e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          1.432e06;
+    C           2.6579e-07;   // last stable
+    Rc          1.4744e+04;   // last stable (unchanged)
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     celiac_trunk
     {
     type        windkesselPressure;
-    Rp          1.504e06; //increase to decrease mean flow to branch
-    C           2.1446e-07; // split-the-difference again
-    Rc          4.0375e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          1.504e06;
+    C           2.1446e-07;   // last stable
+    Rc          4.1586e+04;   // +3% from last stable (targets diastolic hold)
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     sma
     {
     type        windkesselPressure;
-    Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.5742e-07; // split-the-difference again
-    Rc          2.4480e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          9.024e05;
+    C           3.5742e-07;   // last stable
+    Rc          2.5214e+04;   // +3% from last stable
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     renal01
     {
     type        windkesselPressure;
-    Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.5326e-07; // split-the-difference again
-    Rc          2.4768e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          9.024e05;
+    C           3.5326e-07;   // last stable
+    Rc          2.5511e+04;   // +3% from last stable
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
     renal02
     {
     type        windkesselPressure;
-    Rp          9.024e05; //increase to decrease mean flow to branch
-    C           3.5326e-07; // split-the-difference again
-    Rc          2.4768e+04; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          9.024e05;
+    C           3.5326e-07;   // last stable
+    Rc          2.5511e+04;   // +3% from last stable
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     iliac_out
     {
     type        windkesselPressure;
-    Rp          2.710e05; //increase to decrease mean flow to branch
-    C           1.1623e-06; // split-the-difference again
-    Rc          7.2660e+03; // split-the-difference again
-    P_downstream    0.4;      //keep constant; venous pressure
-    initialPC   10.0;     //keep constant; step 0 pressure, set to 80mmHg    
-    value       uniform     10; //step 0 value, matches initialPC
+    Rp          2.710e05;
+    C           1.1623e-06;   // last stable
+    Rc          7.5566e+03;   // +4% from last stable (major runoff sink)
+    P_downstream    0.4;
+    initialPC   10.0;
+    value       uniform     10;
     }
 
     pipe
