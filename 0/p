@@ -30,7 +30,7 @@ boundaryField
     type        windkesselPressure;
     Rp          4.749e05;      // unchanged
     C           7.8306e-07;    // last stable (unchanged)
-    Rc          5.2506e+03;    // +10% from last stable
+    Rc          6.5633e+03;    // +25% from last stable to lift MAP/DBP gently
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -41,7 +41,7 @@ boundaryField
     type        windkesselPressure;
     Rp          1.735e06;      // unchanged
     C           2.1935e-07;    // last stable (unchanged)
-    Rc          1.9653e+04;    // +10% from last stable
+    Rc          2.3570e+04;    // +20% from last stable
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -52,7 +52,7 @@ boundaryField
     type        windkesselPressure;
     Rp          1.432e06;      // unchanged
     C           2.6579e-07;    // last stable (unchanged)
-    Rc          1.6218e+04;    // +10% from last stable
+    Rc          1.9462e+04;    // +32% from last stable
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -63,7 +63,7 @@ boundaryField
     type        windkesselPressure;
     Rp          1.504e06;      // unchanged
     C           2.1446e-07;    // last stable (unchanged)
-    Rc          5.4062e+04;    // +30% from last stable
+    Rc          8.1093e+04;    // +50% from last stable (target splanchnic runoff)
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -74,7 +74,7 @@ boundaryField
     type        windkesselPressure;
     Rp          9.024e05;      // unchanged
     C           3.5742e-07;    // last stable (unchanged)
-    Rc          3.4039e+04;    // +35% from last stable
+    Rc          5.1059e+04;    // +50% from last stable
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -85,7 +85,7 @@ boundaryField
     type        windkesselPressure;
     Rp          9.024e05;      // unchanged
     C           3.5326e-07;    // last stable (unchanged)
-    Rc          3.4450e+04;    // +35% from last stable
+    Rc          5.1675e+04;    // +50% from last stable
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -95,7 +95,7 @@ boundaryField
     type        windkesselPressure;
     Rp          9.024e05;      // unchanged
     C           3.5326e-07;    // last stable (unchanged)
-    Rc          3.4450e+04;    // +35% from last stable
+    Rc          5.1675e+04;    // +50% from last stable
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
@@ -106,7 +106,7 @@ boundaryField
     type        windkesselPressure;
     Rp          2.710e05;      // unchanged
     C           1.1623e-06;    // last stable (unchanged)
-    Rc          1.1335e+04;    // +50% from last stable (major runoff sink)
+    Rc          2.2670e+04;    // ×2.0 from last stable (dominant systemic sink)
     P_downstream    0.4;
     initialPC   10.0;
     value       uniform     10;
