@@ -20,143 +20,108 @@ internalField   uniform 0;
 
 boundaryField
 {
-    inlet
-    {
-        type            zeroGradient;
-    }
-   
+    inlet { type zeroGradient; }
+
+    // ---------------- ARCH: C ↑×10, Rp ↓×0.5, Rc ↑×3 ----------------
     brachiocephalic
     {
-    type        windkesselPressure;
-    Rp          4.749e05;      // unchanged
-    C           7.8306e-07;    // last stable (unchanged)
-    Rc          6.5633e+03;    // +25% from last stable to lift MAP/DBP gently
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              1.66215e+05;       // 0.5 × 3.3243e+05
+        C               7.9722027e-06;     // 10 × 7.9722027e-07
+        Rc              2.0457e+04;        // 3 × 6.8190e+03
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
     lcc
     {
-    type        windkesselPressure;
-    Rp          1.735e06;      // unchanged
-    C           2.1935e-07;    // last stable (unchanged)
-    Rc          2.3570e+04;    // +20% from last stable
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              6.0725e+05;        // 0.5 × 1.2145e+06
+        C               2.18180907e-06;    // 10 × 2.18180907e-07
+        Rc              7.4790e+04;        // 3 × 2.4930e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
     left_subclavian
     {
-    type        windkesselPressure;
-    Rp          1.432e06;      // unchanged
-    C           2.6579e-07;    // last stable (unchanged)
-    Rc          1.9462e+04;    // +32% from last stable
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              5.012e+05;         // 0.5 × 1.0024e+06
+        C               2.64369924e-06;    // 10 × 2.64369924e-07
+        Rc              6.17175e+04;       // 3 × 2.05725e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
+    // ---------------- ABDOMINAL: Rc ↑ to lift diastolic/MAP; C ↑ for damping; Rp held ----------------
     celiac_trunk
     {
-    type        windkesselPressure;
-    Rp          1.504e06;      // unchanged
-    C           2.1446e-07;    // last stable (unchanged)
-    Rc          8.1093e+04;    // +50% from last stable (target splanchnic runoff)
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              1.504e+06;
+        C               5.985e-07;         // 3 × 1.995e-07
+        Rc              1.14114e+05;       // 2 × 5.7057e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
     sma
     {
-    type        windkesselPressure;
-    Rp          9.024e05;      // unchanged
-    C           3.5742e-07;    // last stable (unchanged)
-    Rc          5.1059e+04;    // +50% from last stable
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              9.024e+05;
+        C               9.9744e-07;        // 3 × 3.3248e-07
+        Rc              7.907328e+04;      // 2 × 3.953664e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
     renal01
     {
-    type        windkesselPressure;
-    Rp          9.024e05;      // unchanged
-    C           3.5326e-07;    // last stable (unchanged)
-    Rc          5.1675e+04;    // +50% from last stable
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              9.024e+05;
+        C               9.9744e-07;        // 3 × 3.3248e-07
+        Rc              9.2736e+04;        // 2 × 4.6368e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
+
     renal02
     {
-    type        windkesselPressure;
-    Rp          9.024e05;      // unchanged
-    C           3.5326e-07;    // last stable (unchanged)
-    Rc          5.1675e+04;    // +50% from last stable
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              9.024e+05;
+        C               9.9744e-07;        // 3 × 3.3248e-07
+        Rc              1.0063872e+05;     // 2 × 5.031936e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
+    // Iliac: keep femoral flow <1 LPM but bolster diastolic via τ
     iliac_out
     {
-    type        windkesselPressure;
-    Rp          2.710e05;      // unchanged
-    C           1.1623e-06;    // last stable (unchanged)
-    Rc          2.2670e+04;    // ×2.0 from last stable (dominant systemic sink)
-    P_downstream    0.4;
-    initialPC   10.0;
-    value       uniform     10;
+        type            windkesselPressure;
+        Rp              9.49688064e+05;    // held
+        C               2.2140e-06;        // 2 × 1.1070e-06
+        Rc              8.703259508736e+04; // 1.5 × 5.802173005824e+04
+        P_downstream    0.4;
+        initialPC       11.625;
+        value           uniform 11.625;
     }
 
-    pipe
-    {
-        type            zeroGradient;
-    }
+    pipe { type zeroGradient; }
 
-//    reboa
-//    {
-//        type            zeroGradient;
-//    }
-//    reboa2
-//    {
-//        type            zeroGradient;
-//    }
-
-    defaultFaces
-    {
-        type            zeroGradient;
-    }
-
-    top
-    {
-        type            zeroGradient;
-    }
-    left
-    {
-        type            zeroGradient;
-    }
-    right
-    {
-        type            zeroGradient;
-    }
-    bottom
-    {
-        type            zeroGradient;
-    }
-    front
-    {
-        type            zeroGradient;
-    }
-    back
-    {    
-        type            zeroGradient;
-    }
-
-
+    defaultFaces { type zeroGradient; }
+    top    { type zeroGradient; }
+    left   { type zeroGradient; }
+    right  { type zeroGradient; }
+    bottom { type zeroGradient; }
+    front  { type zeroGradient; }
+    back   { type zeroGradient; }
 }
 
 // ************************************************************************* //

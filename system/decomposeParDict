@@ -16,6 +16,21 @@ FoamFile
 
 numberOfSubdomains 8;
 
+preservePatches
+(
+    inlet
+    brachiocephalic    
+    lcc
+    left_subclavian
+    celiac_trunk
+    sma
+    renal01
+    renal02
+    iliac_out
+    // add all patches using windkesselPressure here,
+    // e.g. brachiocephalic LCC subclavian celiac SMA renalL renalR etc.
+);
+
 
 //method	scotch;
 //method 	hierarchical;
